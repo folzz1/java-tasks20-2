@@ -3,7 +3,7 @@ import java.time.format.DateTimeParseException;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(conv(12));
+
     }
 
     //Задача 1
@@ -41,15 +41,11 @@ public class Main {
 
 
     //Задача 5
-    private static double sqrt(double x){
+    private static double sqrt(double x,double y){
         if(x < 0)
             throw new IllegalArgumentException("Не корректное число");
 
-        double ans = 0;
-        while (ans * ans <= x) {
-            ans++;
-        }
-        return ans - 1;
+        return Math.pow(x,1.0/y);
     }
 
 
@@ -173,11 +169,7 @@ public class Main {
         if (x < 0) {
             throw new IllegalArgumentException("Некорректное число");
         }
-        double ans = 0;
-        while (ans * ans <= x) {
-            ans++;
-        }
-        return ans - 1;
+        return Math.sqrt(x);
     }
 
 
